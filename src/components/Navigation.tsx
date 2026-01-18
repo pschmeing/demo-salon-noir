@@ -43,7 +43,7 @@ export const Navigation = ({ onBookingClick }: NavigationProps) => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <a href="#" className="font-display text-2xl tracking-wider text-foreground">
-            <span className="text-gradient-gold">ATELIER</span>
+            <span className="text-gradient-gold">SALON</span>
             <span className="font-light ml-2">NOIR</span>
           </a>
 

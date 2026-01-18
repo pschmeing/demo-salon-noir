@@ -25,7 +25,7 @@ export const Hero = ({ onBookingClick }: HeroProps) => {
         <div className="max-w-2xl">
           <ScrollReveal>
             <p className="text-gold tracking-[0.4em] uppercase text-xs mb-8">
-              Premium Hair Studio
+              Friseursalon in Burlo
             </p>
           </ScrollReveal>
           

@@ -7,7 +7,7 @@ export const Footer = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Logo */}
           <a href="#" className="font-display text-xl tracking-wider text-foreground">
-            <span className="text-gradient-gold">ATELIER</span>
+            <span className="text-gradient-gold">SALON</span>
             <span className="font-light ml-2">NOIR</span>
           </a>
 

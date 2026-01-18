@@ -30,8 +30,8 @@ export const Contact = ({ onBookingClick }: ContactProps) => {
                 <div>
                   <h3 className="font-display text-xl text-foreground mb-2">Adresse</h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    Musterstraße 42<br />
-                    10115 Berlin Mitte
+                    Lagerstraße 2<br />
+                    46325 Borken
                   </p>
                 </div>
               </div>
@@ -109,7 +109,7 @@ export const Contact = ({ onBookingClick }: ContactProps) => {
             <div className="relative">
               <div className="aspect-square lg:aspect-auto lg:h-full min-h-[450px] bg-charcoal rounded-sm overflow-hidden border border-border">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2427.5!2d13.388!3d52.52!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTLCsDMxJzEyLjAiTiAxM8KwMjMnMTYuOCJF!5e0!3m2!1sde!2sde!4v1"
+                  src="https://www.google.com/maps?q=Lagerstra%C3%9Fe%202%2046325%20Borken&output=embed"
                   width="100%"
                   height="100%"
                   style={{ border: 0, filter: "invert(90%) hue-rotate(180deg) saturate(0.8)" }}

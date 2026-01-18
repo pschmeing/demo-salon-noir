@@ -1,6 +1,5 @@
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "./ui/dialog";
-import { Button } from "./ui/button";
-import { X, Calendar } from "lucide-react";
+import { Calendar } from "lucide-react";
 
 interface BookingModalProps {
   isOpen: boolean;
@@ -8,6 +7,8 @@ interface BookingModalProps {
 }
 
 export const BookingModal = ({ isOpen, onClose }: BookingModalProps) => {
+  const bookingUrl = "https://zeeg.me/your-salon-id";
+
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="sm:max-w-[600px] md:max-w-[800px] h-[80vh] bg-card border-border p-0 overflow-hidden">
@@ -25,35 +26,16 @@ export const BookingModal = ({ isOpen, onClose }: BookingModalProps) => {
         </DialogHeader>
         
         <div className="flex-1 p-6 overflow-auto">
-          {/* Placeholder for Zeeg embed - replace with actual embed code */}
-          <div className="h-full min-h-[400px] bg-charcoal rounded-sm flex flex-col items-center justify-center text-center p-8">
-            <Calendar className="w-16 h-16 text-gold mb-6" />
-            <h3 className="font-display text-2xl text-foreground mb-3">
-              Online Terminbuchung
-            </h3>
-            <p className="text-muted-foreground mb-8 max-w-md">
-              Wähle deinen Wunschtermin bequem online. 
-              Du wirst zu unserem Buchungssystem weitergeleitet.
-            </p>
-            <Button
-              variant="gold"
-              size="lg"
-              onClick={() => window.open("https://zeeg.me", "_blank")}
-            >
-              Zu Zeeg Buchung
-            </Button>
-            <p className="text-sm text-muted-foreground mt-4">
-              Oder ruf uns an: +49 30 123 456 789
-            </p>
+          <div className="h-full min-h-[500px] bg-charcoal rounded-sm overflow-hidden">
+            <iframe
+              src={bookingUrl}
+              className="w-full h-full border-0"
+              title="Terminbuchung"
+            />
           </div>
-          
-          {/* When you have actual Zeeg embed, use this instead:
-          <iframe
-            src="https://zeeg.me/your-salon-id"
-            className="w-full h-full min-h-[500px] border-0 rounded-sm"
-            title="Terminbuchung"
-          />
-          */}
+          <p className="text-sm text-muted-foreground mt-4 text-center">
+            Oder ruf uns an: +49 30 123 456 789
+          </p>
         </div>
       </DialogContent>
     </Dialog>

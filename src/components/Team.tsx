@@ -6,6 +6,7 @@ import { TeamMemberModal } from "./TeamMemberModal";
 import team1 from "@/assets/team-1.jpg";
 import team2 from "@/assets/team-2.jpg";
 import team3 from "@/assets/team-3.jpg";
+import team4 from "@/assets/team-4.jpg";
 
 const team = [
   {
@@ -37,6 +38,16 @@ const team = [
     bio: "Als zertifizierte Coloristin mit Spezialisierung auf komplexe Farbkorrekturen und kreative Techniken bringt Lina jede Haarfarbe zum Strahlen. Ihre Arbeit wurde mehrfach in Fachmagazinen veröffentlicht.",
     experience: "8+ Jahre | L'Oréal Colorist Zertifikat",
     instagram: "https://instagram.com/linachen",
+  },
+  {
+    name: "Jasmin Keller",
+    role: "Stylist & Texture Artist",
+    specialty: "Curls, Naturlocken, Soft Layers",
+    image: team4,
+    quote: "Struktur bringt Leben in jeden Look.",
+    bio: "Jasmin ist spezialisiert auf moderne Texturtechniken und natürliche Locken. Ihr Fokus liegt auf Pflege, Form und Bewegung für Looks, die auch zu Hause funktionieren.",
+    experience: "6+ Jahre | Texture & Curl Specialist",
+    instagram: "https://instagram.com/jasminkeller",
   },
 ];
 
@@ -83,7 +94,7 @@ export const Team = ({ onBookingClick }: TeamProps) => {
           <div className="relative">
             <div className="overflow-hidden" ref={emblaRef}>
               <div className="flex gap-6 md:gap-10">
-                {team.map((member, index) => (
+                {team.map((member) => (
                   <div
                     key={member.name}
                     className="flex-[0_0_85%] md:flex-[0_0_40%] lg:flex-[0_0_30%] min-w-0"

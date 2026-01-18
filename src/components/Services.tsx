@@ -1,4 +1,5 @@
 import { Scissors, Sparkles, Droplets, Crown } from "lucide-react";
+import { ScrollReveal } from "./ScrollReveal";
 
 const services = [
   {
@@ -46,64 +47,66 @@ const services = [
 
 export const Services = () => {
   return (
-    <section id="leistungen" className="section-padding bg-card">
-      <div className="container mx-auto">
+    <section id="leistungen" className="py-32 md:py-44 bg-card">
+      <div className="container mx-auto px-6">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <p className="text-gold tracking-[0.3em] uppercase text-sm mb-4">
+        <ScrollReveal className="text-center mb-20">
+          <p className="text-gold tracking-[0.4em] uppercase text-xs mb-6">
             Unsere Expertise
           </p>
           <h2 className="heading-section text-foreground">
             Leistungen & Preise
           </h2>
-        </div>
+        </ScrollReveal>
 
         {/* Services Grid */}
-        <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
-          {services.map((service) => (
-            <div
+        <div className="grid md:grid-cols-2 gap-10 lg:gap-14 max-w-6xl mx-auto">
+          {services.map((service, index) => (
+            <ScrollReveal
               key={service.category}
-              className="card-elegant group hover:border-gold/50 transition-all duration-500"
+              delay={index * 0.1}
             >
-              {/* Category Header */}
-              <div className="flex items-center gap-4 mb-8 pb-4 border-b border-border">
-                <div className="w-12 h-12 rounded-sm bg-gold/10 flex items-center justify-center group-hover:bg-gold/20 transition-colors duration-300">
-                  <service.icon className="w-6 h-6 text-gold" />
-                </div>
-                <h3 className="font-display text-2xl text-foreground">
-                  {service.category}
-                </h3>
-              </div>
-
-              {/* Service Items */}
-              <div className="space-y-4">
-                {service.items.map((item) => (
-                  <div
-                    key={item.name}
-                    className="flex items-center justify-between py-3 border-b border-border/50 last:border-0"
-                  >
-                    <div>
-                      <p className="text-foreground font-medium">{item.name}</p>
-                      {item.duration && (
-                        <p className="text-sm text-muted-foreground">
-                          {item.duration}
-                        </p>
-                      )}
-                    </div>
-                    <p className="text-gold font-display text-lg">{item.price}</p>
+              <div className="card-elegant group hover:border-gold/30 transition-all duration-500 h-full">
+                {/* Category Header */}
+                <div className="flex items-center gap-5 mb-10 pb-6 border-b border-border">
+                  <div className="w-14 h-14 rounded-sm bg-gold/10 flex items-center justify-center group-hover:bg-gold/20 transition-colors duration-300">
+                    <service.icon className="w-6 h-6 text-gold" />
                   </div>
-                ))}
+                  <h3 className="font-display text-2xl md:text-3xl text-foreground">
+                    {service.category}
+                  </h3>
+                </div>
+
+                {/* Service Items */}
+                <div className="space-y-5">
+                  {service.items.map((item) => (
+                    <div
+                      key={item.name}
+                      className="flex items-center justify-between py-4 border-b border-border/30 last:border-0"
+                    >
+                      <div>
+                        <p className="text-foreground font-medium text-lg">{item.name}</p>
+                        {item.duration && (
+                          <p className="text-sm text-muted-foreground mt-1">
+                            {item.duration}
+                          </p>
+                        )}
+                      </div>
+                      <p className="text-gold font-display text-xl">{item.price}</p>
+                    </div>
+                  ))}
+                </div>
               </div>
-            </div>
+            </ScrollReveal>
           ))}
         </div>
 
         {/* CTA */}
-        <div className="text-center mt-16">
-          <p className="text-muted-foreground mb-6">
+        <ScrollReveal className="text-center mt-20" delay={0.4}>
+          <p className="text-muted-foreground text-sm">
             Alle Preise inklusive Beratung. Aufpreis bei überdurchschnittlicher Haarlänge möglich.
           </p>
-        </div>
+        </ScrollReveal>
       </div>
     </section>
   );

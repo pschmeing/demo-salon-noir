@@ -44,10 +44,10 @@ export const Contact = ({ onBookingClick }: ContactProps) => {
                 <div>
                   <h3 className="font-display text-xl text-foreground mb-2">Telefon</h3>
                   <a
-                    href="tel:+4930123456789"
+                    href="tel:+492862123456"
                     className="text-muted-foreground hover:text-gold transition-colors"
                   >
-                    +49 30 123 456 789
+                    +49 2862 123 456
                   </a>
                 </div>
               </div>

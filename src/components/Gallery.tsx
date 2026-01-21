@@ -5,10 +5,10 @@ import gallery3 from "@/assets/gallery-3.jpg";
 import gallery4 from "@/assets/gallery-4.jpg";
 
 const images = [
-  { src: gallery1, alt: "Styling Result", span: "col-span-2 row-span-2" },
-  { src: gallery2, alt: "Salon Tools", span: "col-span-1 row-span-1" },
-  { src: gallery3, alt: "Salon Interior", span: "col-span-1 row-span-1" },
-  { src: gallery4, alt: "Hair Color Result", span: "col-span-2 row-span-1" },
+  { src: gallery1, alt: "Elegantes Balayage Hair Styling Resultat", span: "col-span-2 row-span-2" },
+  { src: gallery2, alt: "Professionelles Friseurschnitt-Werkzeug im Salon", span: "col-span-1 row-span-1" },
+  { src: gallery3, alt: "Luxuriöses Interieur des Salon Noir", span: "col-span-1 row-span-1" },
+  { src: gallery4, alt: "Brillantes Farbergebnis einer Coloration", span: "col-span-2 row-span-1" },
 ];
 
 export const Gallery = () => {
